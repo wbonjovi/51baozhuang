@@ -89,6 +89,43 @@
             color: white;
             background: transparent
         }
+        .striped input[type=text]  {
+            width: 3rem;height: 2rem ;
+        }
+        .striped {
+            color: gray;
+        }
+        .striped input[type=radio]   {
+            opacity:0;
+        }
+        .striped input[type=radio] + i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid;
+        }
+        .striped input[type=radio]:checked + i  {
+            width:  12px;
+            height:  12px;
+            border: 5px solid #1277dc;
+        }
+        table {
+            border: 1px solid lightgray;
+        }
+        table .gray-tr {
+            background: #f2f2f2;
+            color : #1277dc;
+            font-weight: bold;
+        }
+        table .lightgray-tr {
+            font-weight:normal;
+            background: #FBFCFF;
+        }
+        table .lightgray-tr label{
+            font-weight:normal;
+        }
+
     </style>
 </head>
 <body>
@@ -131,76 +168,135 @@
     <div class="row ">
         <div class="blue-line"> <span class="blue-span"></span></div> <b>请您按照以下步骤来定制您的纸箱</b>
     </div>
-
+    <br>
     <div class="row ">
-        <table class="table table-striped" style=" margin-bottom: 0">
-            <tr>
+        <table class="table  striped"  >
+            <tr class="gray-tr" >
                 <td>
-                    <img src="../images/box.png" alt="">选择香型
+                    <img src="../images/box.png" alt="">选择箱型
                 </td>
             </tr>
-            <tr>
+            <tr class="lightgray-tr" >
                 <td>
                     <div class="pull-left" >
-                        <input type="radio" name="optionsRadios1" > 对口箱 <i style="border: solid 5px red;border-radius: 50%;padding: 2px;display: inline-block"></i>
-                        <input type="radio" name="optionsRadios1">天地盖
-                        <input type="radio" name="optionsRadios1">飞机盒
+                        <label><input type="radio" name="optionsRadios1"> <i></i> 对口箱  </label>
+                        <label><input type="radio" name="optionsRadios1"> <i></i> 天地盖 </label>
+                        <label><input type="radio" name="optionsRadios1"> <i></i> 飞机盒 </label>
                     </div>
                     <div class="pull-right">
-                        <input type="button" typeof="查看更多">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">查看详情
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">功能</a>
+                                </li>
+                                <li>
+                                    <a href="#">另一个功能</a>
+                                </li>
+                                <li>
+                                    <a href="#">其他</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">分离的链接</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </td>
             </tr>
-            <tr>
+            <tr class="gray-tr" >
                 <td>
                     <img src="../images/Ruler.png" alt="">确定尺寸
                 </td>
             </tr>
-            <tr>
+            <tr class="lightgray-tr" >
                 <td class=" ">
                     <div class="pull-left  " >
-                    <span><input type="radio" name="optionsRadios2"    > 内径</span>
-                    <span>长<input type="text">mm </span>
-                    <span>宽<input type="text">mm </span>
-                    <span>高<input type="text">mm </span> <br>
-                    <span> <input type="radio" name="optionsRadios2"    > 内径</span>
-                    <span>长<input type="text">mm </span>
-                    <span>宽<input type="text">mm </span>
-                    <span>高<input type="text">mm </span>
+                    <label><input type="radio" name="optionsRadios2"    > <i></i>  内径</label>&nbsp;
+                    <label>长<input type="text"  >mm </label>&nbsp;
+                    <label>宽<input type="text"  >mm </label>&nbsp;
+                    <label>高<input type="text"  >mm </label> <br>
+                    <label> <input type="radio" name="optionsRadios2"    > <i></i>  内径</label>&nbsp;
+                    <label>长<input type="text"   >mm </label>&nbsp;
+                    <label>宽<input type="text"  >mm </label>&nbsp;
+                    <label>高<input type="text"  >mm </label>&nbsp;
                     </div>
 
                     <div class="pull-right  `">
-                        <input type="button" typeof="查看更多">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">查看详情
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">功能</a>
+                                </li>
+                                <li>
+                                    <a href="#">另一个功能</a>
+                                </li>
+                                <li>
+                                    <a href="#">其他</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">分离的链接</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </td>
 
             </tr>
-            <tr>
+            <tr class="gray-tr" >
                 <td>
                     <img src="../images/scissors.png" alt="">选择材质
                 </td>
             </tr>
-            <tr >
+            <tr class="lightgray-tr" >
                 <td>
                     <div class="pull-left" >
-                        <span><input type="radio" name="optionsRadios3"  >三层A瓦优质   </span>
-                        <span><input type="radio" name="optionsRadios3"   >三层A瓦优质</span>
-                        <span><input type="radio" name="optionsRadios3"  >三层A瓦优质</span>
-                        <span><input type="radio" name="optionsRadios3"   >三层A瓦优质</span>
+                        <label><input type="radio" name="optionsRadios3"  > <i></i> 三层A瓦优质   </label>
+                        <label><input type="radio" name="optionsRadios3"  > <i></i> 三层A瓦优质</label>
+                        <label><input type="radio" name="optionsRadios3"  > <i></i> 三层A瓦优质</label>
+                        <label><input type="radio" name="optionsRadios3"  > <i></i> 三层A瓦优质</label>
+                    </div>
+
+                    <div class="pull-right  `">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">查看详情
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="#">功能</a>
+                                </li>
+                                <li>
+                                    <a href="#">另一个功能</a>
+                                </li>
+                                <li>
+                                    <a href="#">其他</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">分离的链接</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </td>
             </tr>
+            <tr class="  button-div ">
+                <td class="button ">
+                    <button class="btn btn-danger">下一步</button>
+                </td>
+            </tr>
         </table>
-        <hr style="margin: 0">
 
     </div>
 
-    <div class="row button-div ">
-        <div class="button ">
-            <button class="btn btn-danger">下一步</button>
-        </div>
-    </div>
-    <hr  >
 </div>
 
 <footer class="footer "  >
