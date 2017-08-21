@@ -85,6 +85,9 @@
             background-color: #1277DC;
             font-size: .5rem;
         }
+        footer .footer-parent {
+            text-align: center;
+        }
         .nav li  a {
             color: white;
             background: transparent
@@ -118,14 +121,86 @@
             color : #1277dc;
             font-weight: bold;
         }
-        table .lightgray-tr {
+        table .lightgray-tr{
             font-weight:normal;
             background: #FBFCFF;
+        }
+        table .lightgray-tr td{
+            height: 100%;
+            /*display: flex;*/
+            /*align-items:center;*/
+            width: 100%;
+        }
+        table .lightgray-tr td .pull-right{
+            display: block;
+            height: 100%;
+            background-color: black;
         }
         table .lightgray-tr label{
             font-weight:normal;
         }
-
+        table tr .btn-group button   {
+            border-radius: 0;
+        }
+        table tr  button .caret-span {
+            background-color: #1277dc ;
+            padding: 3px 5px;
+            border-radius: 2px;
+        }
+        table button .caret-span {
+            color: white;
+        }
+        .box {
+            position: relative;
+            border: solid 2px #9d9d9d;
+            border-radius: 2px;
+            margin-top: 2rem;
+        }
+        .box  .bmbox {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .box  .bmbox .circle-number {
+            background : #9d9d9d ;
+            display: table;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            color:   white;
+            margin: 2px;
+        }
+        .box  .bmbox .table-son {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .step {
+            text-align: center;
+            color: #9d9d9d;
+            font-size: 2rem;
+        }
+        .orange-box {
+            border: orange 2px solid;
+        }
+        .orange-circle-number {
+            background : orange  ;
+            display: table;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            color:   white;
+            margin: 2px;
+        }
+        .orange-step {
+            color : orange ;
+            text-align: center;
+            font-size: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -147,8 +222,8 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class=" pull-right">
-                    <button class="  btn btn-default " id="active" >首页</button>
+                <div class=" pull-right      ">
+                    <button class="btn btn-default " id="active" >首页</button>
                     <button class="btn btn-default">在线定制</button>
                     <button class="btn btn-default">标准箱</button>
                     <button class="btn btn-default">品质保障</button>
@@ -161,8 +236,43 @@
 
 <div class="container body" >
     <div class="row ">
-        <div class=" pull-right">
-
+        <div class=" pull-right col-lg-6 col-md-9  col-sm-9 col-xs-12">
+            <div class="col-lg-3 col-md-3  col-sm-3 col-xs-6">
+                <div class="row box  orange-box">
+                    <div class="bmbox   "><span class="orange-circle-number  "> <span class="table-son  ">1</span></span></div>
+                </div>
+                <br>
+                <div class="row orange-step">
+                    1.定制纸箱
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3  col-sm-3 col-xs-6">
+                <div class="row box">
+                    <div class="bmbox"><span class="circle-number "> <span class="table-son">2</span></span></div>
+                </div>
+                <br>
+                <div class="row step">
+                    2.选择数量
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3  col-sm-3 col-xs-6">
+                <div class="row box">
+                    <div class="bmbox"><span class="circle-number "> <span class="table-son">3</span></span></div>
+                </div>
+                <br>
+                <div class="row step">
+                    3.上传文件
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3  col-sm-3 col-xs-6">
+                <div class="row box">
+                    <div class="bmbox"><span class="circle-number "> <span class="table-son">4</span></span></div>
+                </div>
+                <br>
+                <div class="row step">
+                    4.确认下单
+                </div>
+            </div>
         </div>
     </div>
     <div class="row ">
@@ -176,17 +286,18 @@
                     <img src="../images/box.png" alt="">选择箱型
                 </td>
             </tr>
-            <tr class="lightgray-tr" >
+            <tr class="lightgray-tr   " >
                 <td>
                     <div class="pull-left" >
                         <label><input type="radio" name="optionsRadios1"> <i></i> 对口箱  </label>
                         <label><input type="radio" name="optionsRadios1"> <i></i> 天地盖 </label>
                         <label><input type="radio" name="optionsRadios1"> <i></i> 飞机盒 </label>
+
                     </div>
                     <div class="pull-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">查看详情
-                                <span class="caret"></span>
+                                <span class="caret-span" ><span class="caret" ></span></span>
                             </button>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -213,22 +324,21 @@
                 </td>
             </tr>
             <tr class="lightgray-tr" >
-                <td class=" ">
-                    <div class="pull-left  " >
-                    <label><input type="radio" name="optionsRadios2"    > <i></i>  内径</label>&nbsp;
-                    <label>长<input type="text"  >mm </label>&nbsp;
-                    <label>宽<input type="text"  >mm </label>&nbsp;
-                    <label>高<input type="text"  >mm </label> <br>
-                    <label> <input type="radio" name="optionsRadios2"    > <i></i>  内径</label>&nbsp;
-                    <label>长<input type="text"   >mm </label>&nbsp;
-                    <label>宽<input type="text"  >mm </label>&nbsp;
-                    <label>高<input type="text"  >mm </label>&nbsp;
-                    </div>
+                <td class=" "   >
+                    <div class="pull-left  "  >
+                       <label><input type="radio" name="optionsRadios2"    > <i></i>  内径</label>&nbsp;
+                            <label>长<input type="text"  >mm </label>&nbsp;
+                            <label>宽<input type="text"  >mm </label>&nbsp;
+                            <label>高<input type="text"  >mm </label> <br>
+                            <label> <input type="radio" name="optionsRadios2"    > <i></i>  内径</label>&nbsp;
+                            <label>长<input type="text"   >mm </label>&nbsp;
+                            <label>宽<input type="text"  >mm </label>&nbsp;
+                            <label>高<input type="text"  >mm </label>&nbsp; </div>
 
-                    <div class="pull-right  `">
+                    <div class="pull-right " style=" ;margin-top: auto;justify-content: center">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">查看详情
-                                <span class="caret"></span>
+                                <span class="caret-span" ><span class="caret" ></span></span>
                             </button>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -267,7 +377,7 @@
                     <div class="pull-right  `">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">查看详情
-                                <span class="caret"></span>
+                                <span class="caret-span" ><span class="caret" ></span></span>
                             </button>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -305,28 +415,30 @@
         <div class="container">
             <div class="row ">
 
-                <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12  ">
-                    <h4>51包装网— 纸箱包装首选服务平台</h4>
+                <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12  parent">
+                    <h4 class="    " >51包装网— 纸箱包装首选服务平台</h4>
                 </div>
-                <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12   ">
-                    <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-                        <a href=""> 关于我们</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-                        <a href=""> 配送流程</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-                        <a href=""> 联系我们</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-                        <a href=""> 联系我们</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
-                        <a href=""> 媒体介绍</a>
+                <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12   parent">
+                    <div class="   row footer-parent" >
+                        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+                            <a href=""> 关于我们</a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+                            <a href=""> 配送流程</a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+                            <a href=""> 联系我们</a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+                            <a href=""> 联系我们</a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12 col-sm-12">
+                            <a href=""> 媒体介绍</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12   ">
-                    <div class="pull-right row parent" >
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12   parent">
+                    <div class="  row " >
 
                         <div class="pull-left child"  >
                             <p>TEL：400-0000-000</p>
